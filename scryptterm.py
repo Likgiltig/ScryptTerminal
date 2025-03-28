@@ -166,17 +166,6 @@ def process_file(filename, password, mode='encrypt'):
         return False
 
 def process_path(path, mode='encrypt', password=None):
-    """
-    Process a file or directory for encryption/decryption.
-    
-    Args:
-        path (str): File or directory path
-        mode (str): 'encrypt' or 'decrypt'
-        password (str, optional): Password for operation
-    
-    Returns:
-        tuple: (success_count, fail_count)
-    """
     # Find files to process
     if os.path.isfile(path):
         files = [path]

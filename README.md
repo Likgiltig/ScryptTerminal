@@ -41,4 +41,4 @@ python scryptterm.py file.encrypted keyfile.key
 ```
 
 
-**CRITICAL ENCRYPTION DISCLAIMER:** The security of your encrypted files is entirely dependent on the strength and secrecy of your password. Use a strong, unique password, if you lose your password or key, your data will be lost forever.
+**CRITICAL ENCRYPTION DISCLAIMER:** The security of your encrypted files is entirely dependent on the strength and secrecy of your password/key. Use a strong, unique password, if you lose your password or key, your data will be lost forever.

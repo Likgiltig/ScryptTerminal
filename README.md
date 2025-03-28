@@ -1,4 +1,3 @@
-
 #   ScryptTerminal
 
 A Python-based command-line tool for encrypting and decrypting files with strong security measures, including AES-GCM, Scrypt, and secure deletion of original file.
@@ -8,7 +7,10 @@ A Python-based command-line tool for encrypting and decrypting files with strong
 * **Authenticated Encryption:** Uses AES-GCM for strong confidentiality and data integrity, with a 96-bit initialization vector (IV) and authentication tag.
 * **Key Derivation Function:** Utilizes Scrypt for password-based key derivation, a memory-hard KDF resistant to brute-force and dictionary attacks. Scrypt parameters are n=2^14, r=8, and p=1.
 * **Secure File Deletion:** Attempts to securely delete original files using the `shred` command on Unix-like systems. On Windows, it overwrites files with zeros before removal.
-* **Password Handling:** Secure password input via `getpass.getpass()`.
+* **Password Handling:** Secure password input via `getpass.getpass()`
+* **Directory Handling:** Ability to encrypt or decrypt all files within a specified directory.
+* **Filename Obfuscation:** Obfuscates original filenames inside the enrypted files in a secure manner.
+* **Filename Collision Handling:** When decrypting, the script checks for existing files and renames to avoid overwriting.
 
 ##   Installation
 
@@ -22,9 +24,9 @@ pip install cryptography
 ##   Usage
 
 ```bash
-python endesec.py <filename>
+python scryptterm.py <filename/folder>
 ```
 
 
 
-**CRITICAL PASSWORD DISCLAIMER:** The security of your encrypted files is entirely dependent on the strength and secrecy of your password. Use a strong, unique password, but if you lose your password, your data will be lost forever.
+**CRITICAL PASSWORD DISCLAIMER:** The security of your encrypted files is entirely dependent on the strength and secrecy of your password. Use a strong, unique password, if you lose your password, your data will be lost forever.
